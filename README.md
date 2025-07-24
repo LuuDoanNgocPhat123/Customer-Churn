@@ -36,57 +36,60 @@ The advantage of calculating a company's churn rate is that it provides clarity 
 
 ## 🔍 Data Exploration & Preprocessing
 
-Trước khi xây dựng mô hình, dữ liệu đã được xử lý kỹ lưỡng để đảm bảo chất lượng:
+Before building the model, the data was carefully processed to ensure quality:
 
-- **Xử lý thiếu dữ liệu**: Cột `TotalCharges` chứa giá trị trống đã được làm sạch hoặc chuyển đổi phù hợp.
-- **Chuyển đổi kiểu dữ liệu**: Một số cột được ép kiểu từ `object` sang `float` để phục vụ cho việc phân tích.
-- **Biến đổi nhãn**: Sử dụng `Label Encoding` và `One-Hot Encoding` để xử lý các biến phân loại.
-- **Cân bằng dữ liệu**: Kiểm tra phân phối nhãn và thực hiện điều chỉnh nếu cần thiết để cải thiện độ chính xác mô hình.
+- **Handling Missing Data**: The `TotalCharges` column, which contained missing values, was cleaned or appropriately converted.
+- **Data Type Conversion**: Some columns were cast from `object` to `float` to support further analysis.
+- **Label Transformation**: Applied `Label Encoding` and `One-Hot Encoding` to handle categorical variables.
+- **Data Balancing**: Checked label distribution and performed adjustments if necessary to improve model accuracy.
 
 ---
 
 ## 📊 Exploratory Data Analysis (EDA)
 
-Phân tích dữ liệu ban đầu giúp hiểu rõ hơn về hành vi của khách hàng:
+Initial data analysis provided valuable insights into customer behavior:
 
-- Trực quan hóa mối quan hệ giữa `churn` và các yếu tố như: loại dịch vụ, phương thức thanh toán, thời gian sử dụng (tenure), v.v.
-- Dùng biểu đồ cột, histogram, boxplot và heatmap để phát hiện các xu hướng, điểm bất thường và tương quan trong dữ liệu.
+- Visualized the relationship between `churn` and other factors such as service types, payment methods, and tenure.
+- Used bar charts, histograms, boxplots, and heatmaps to detect trends, outliers, and correlations in the data.
 
 ---
 
 ## ⚙️ Model Training & Evaluation
 
-Các mô hình được huấn luyện và so sánh hiệu suất:
+Several models were trained and their performances were compared:
 
-- **Tách tập dữ liệu**: 80% cho huấn luyện, 20% cho kiểm thử.
-- **Chuẩn hóa dữ liệu**: Sử dụng `StandardScaler` để đảm bảo các mô hình hoạt động hiệu quả.
-- **Huấn luyện nhiều mô hình**: Logistic Regression, Random Forest, Decision Tree, Gaussian Naive Bayes, XGBoost.
-- **Đánh giá mô hình**: Dựa trên độ chính xác (`Accuracy`), cùng với `Confusion Matrix`, `Precision`, `Recall`, và `F1-score`.
+- **Data Splitting**: 80% for training and 20% for testing.
+- **Data Normalization**: Used `StandardScaler` to ensure consistent model performance.
+- **Model Training**: Applied Logistic Regression, Random Forest, Decision Tree, Gaussian Naive Bayes, and XGBoost.
+- **Model Evaluation**: Based on `Accuracy`, along with `Confusion Matrix`, `Precision`, `Recall`, and `F1-score`.
 
 ---
 
 ## 📈 Visualization
 
-Dữ liệu và kết quả được minh họa trực quan:
+Data and results were visualized clearly:
 
-- Ma trận nhầm lẫn cho từng mô hình
-- Biểu đồ so sánh độ chính xác giữa các thuật toán
-- Biểu đồ phân phối khách hàng theo churn status
-- ROC Curve cho bài toán phân loại (nếu applicable)
+- Confusion matrices for each model  
+- Accuracy comparison across algorithms  
+- Distribution plots of customers by churn status  
+- ROC Curves for classification performance (if applicable)
 
 ---
 
 ## 💡 Insights
 
-Một số điểm rút ra từ quá trình phân tích:
+Key findings from the analysis:
 
-- Khách hàng trả sau và dùng nhiều dịch vụ đồng thời có khả năng churn cao hơn.
-- Thời gian gắn bó (`tenure`) càng thấp, khả năng churn càng cao.
-- Một số khu vực địa lý có mật độ churn cao đáng kể.
+- Postpaid customers using multiple services simultaneously are more likely to churn.
+- The shorter the customer tenure, the higher the likelihood of churn.
+- Some geographic regions showed significantly higher churn rates.
+
+---
 
 ## 📬 Contact
 
-Mọi thắc mắc hoặc đóng góp, vui lòng liên hệ:
+For questions or contributions, please feel free to reach out:
 
-- 📧 Email: [luudoanngocphat@gmail.com](mailto:luudoanngocphat@gmail.com)
+- 📧 Email: [luudoanngocphat@gmail.com](mailto:luudoanngocphat@gmail.com)  
 - 📞 Phone: 0905939655
+
